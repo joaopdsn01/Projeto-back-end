@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--incluindo o bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Kali Racers</title>
+    <!--Incluindo o style-->
+    <link rel="stylesheet" href="Style.css">
+</head>
+
+<body>
+
+                <!--Menu lateral Mobile-->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="menu-lateral-mobile">
+        <div class="offcanvas-header">
+            <h1 class="offcanvas-title">Kali racers</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas">Fecha?</button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a class="nav-link" href="Turbinas.html">Turbinas</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Perifericos.html">Periféricos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Alimentacao.html">Alimentação</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="Powertrain.html">Power train</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="User_Consult.html">Consultar usuário</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+
+                <!--Menu lateral desktop-->
+    <div class="menu-lateral d-none d-md-block">
+        <h1>Kali racers</h1>
+        <ul class="nav flex-column">
+            <li class="nav-item">
+                <a class="nav-link" href="Turbinas.html">Turbinas</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="Perifericos.html">Periféricos</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="Alimentacao.html">Alimentação</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="Powertrain.html">Power train</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="User_Consult.html">Consultar usuário</a>
+            </li>
+        </ul>
+    </div>
+
+                    <!--Menu principal-->
+    <div class="areal-principal">
+        <!--Topo-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <!--Botão do menu lateral (para o mobile)-->
+                <button class="btn btn-outline-light d-md-none me-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#menu-lateral-mobile"> ☰</button>
+                <!--Logo do site com o link para voltar para o início-->
+                <a class="navbar-brand" href="main-page.html"> <img src="Logo1.png" class="img-fluid" style="width: 40%; height: 40%;"></a>
+                <div class="row justify-content-end">
+                    <!--Dark Mode-->
+                    <button id="darkmode" type="button" class="btn"  data-bs-toggle="button"> <img src="darkmode.png" style="width:80%;height:80%;"> </button>
+                    <!--Login e cadastro-->
+                    <button id="usuario" type="button" class="btn"  data-bs-toggle="button"> <img src="icone.png" style="width:80%;height:80%;"> </button>
+                </div>
+            </div>
+        </nav>
+    </div>
+    
+    
+
+
+<!--Conteúdo principal-->
+
+    <div class="conteudo-principal">
+        <h1>Alimentação</h1>
+
+        <!--row = Linhas de conteúdos-->
+        <div class="row">
+
+            <!-- Card 1 -->
+            <div class="card" id="card">
+                <div class="card-body">
+                    <button type="button" 
+                            class="btn btnmodalproduto" 
+                            data-bs-toggle="modal" 
+                            data-bs-target="#modalProduto" 
+                            data-nome="Bico injetor" 
+                            data-preco="R$ 2.196,00" 
+                            data-desc="Bico injetor de alta impedância FT injector
+                            80 lb/h
+                            120 lb/h
+                            170 lb/h">
+                        <h5 id="titulo-produto" class="card-title">Bico Injetor FT</h5>
+                        <img src="Bico Injetor De Alta Impedância Ft Injector.webp" style="width:45%;height:50%;">
+                        <!--Mais conteúdo-->
+                        <!--LEMBRAR DE USA PHP AQUI, PASSAR AS INFORMAÇÕES PARA O MODAL VIA ATRIBUTOS (data-*) OU FAZER UMA REQUISIÇÃO AJAX( JS chama o PHP QUE CONSULTA O BANCO E RETORNA OS DADOS). -->
+                        <p class="card-text" style="color:white;">Bico injetor FT</p>
+                        <p style="color:blue;">R$ 2.196,00<br>em até 12x</p>
+                        </button>
+                </div>
+            </div>
+            
+
+            <!-- Card 2-->
+            <div class="card" id="card">
+                <div class="card-body">
+                    <button type="button" 
+                            class="btn btnmodalproduto" 
+                            data-bs-toggle="modal" 
+                            data-bs-target="#modalProduto" 
+                            data-nome="Bomba de Combustível" 
+                            data-preco="R$ 29.998,00" 
+                            data-desc="Bomba de Combustível Nostrum de Alta Performance Stage 2 (HPFP)
+                            Para BMW F80 M3, F82 / F83 M4 e F87 M2 Competition Motor S55 3.0L">
+                        <h5 id="titulo-produto" class="card-title">Bomba de combustível</h5>
+                        <img src="Bomba de Combustível Nostrum de Alta Performance Stage 2 (HPFP) Para BMW F80 M3 F82  F83 M4 e F87 M2 Competition Motor S55 30L.webp" style="width:100%;height:50%;">
+                        <!--Mais conteúdo-->
+                        <!--LEMBRAR DE USA PHP AQUI, PASSAR AS INFORMAÇÕES PARA O MODAL VIA ATRIBUTOS (data-*) OU FAZER UMA REQUISIÇÃO AJAX( JS chama o PHP QUE CONSULTA O BANCO E RETORNA OS DADOS). -->
+                        <p class="card-text" style="color:white;">Bomba de combustível nostrum de alta performance Stage 2 para BMW Chassi F > 2020</p>
+                        <p style="color:blue;">R$ 29.998,00<br>em até 12x</p>
+                        </button>
+                </div>
+            </div>
+
+            <!-- Card 3-->
+            <div class="card" id="card">
+                <div class="card-body">
+                    <button type="button" 
+                            class="btn btnmodalproduto" 
+                            data-bs-toggle="modal" 
+                            data-bs-target="#modalProduto" 
+                            data-nome="Nitromotanol" 
+                            data-preco="R$ 522,50" 
+                            data-desc="O M10 é um combustível que produz mais energia se comparado ao M5 graças aos seus avançados aditivos de combustão.
+                            Além disso, oferece proteção superior contra o desgaste dos componentes e máxima vaporização. Como resultado, o M10 oferece uma
+                            faixa mais ampla na relação ar/combustível permitindo ajustes mais finos.">
+                        <h5 id="titulo-produto" class="card-title">Nitrometanol</h5>
+                        <img src="nitrometanol M10 20 Litros Mm racing Fuel.webp" style="width:50%;height:50%;">
+                        <!--Mais conteúdo-->
+                        <!--LEMBRAR DE USA PHP AQUI, PASSAR AS INFORMAÇÕES PARA O MODAL VIA ATRIBUTOS (data-*) OU FAZER UMA REQUISIÇÃO AJAX( JS chama o PHP QUE CONSULTA O BANCO E RETORNA OS DADOS). -->
+                        <p class="card-text" style="color:white;">Nitrometanol M10 20 Litros MM racing fuel</p>
+                        <p style="color:blue;">R$ 522,50<br>em até 12x</p>
+                        </button>
+                </div>
+            </div>
+
+            <!-- Card 4-->
+            <div class="card" id="card">
+                <div class="card-body">
+                    <button type="button" 
+                            class="btn btnmodalproduto" 
+                            data-bs-toggle="modal" 
+                            data-bs-target="#modalProduto" 
+                            data-nome="Weber 40" 
+                            data-preco="R$ 1.499,00" 
+                            data-desc="Carburador Weber 40 IDF importada.">
+                        <h5 id="titulo-produto" class="card-title">HX 40</h5>
+                        <img src="weber 40.webp" style="width:115%;height:100%;">
+                        <!--Mais conteúdo-->
+                        <!--LEMBRAR DE USA PHP AQUI, PASSAR AS INFORMAÇÕES PARA O MODAL VIA ATRIBUTOS (data-*) OU FAZER UMA REQUISIÇÃO AJAX( JS chama o PHP QUE CONSULTA O BANCO E RETORNA OS DADOS). -->
+                        <p class="card-text" style="color:white;">Carburador Weber 40</p>
+                        <p style="color:blue;">R$ 1.499,00<br>em até 12x</p>
+                        </button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Modal de Produto (Bootstrap) -->
+<div class="modal fade" id="modalProduto" tabindex="-1" aria-labelledby="modalLabelProduto" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalLabelProduto"></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+        </div>
+        
+        <div class="modal-body">
+          <p id="modalPreco"></p>
+          <p id="modalDesc"></p>
+        </div>
+        
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+                <!--Modal do login-->
+    <dialog id="modal-usuario">
+        <div id="perfil">
+            <h2 style="color: #f74000;">Perfil de usuário</h2>
+            <button onclick="abrirPerfil()">Informações do usuário</button>
+            <div id="perfil-dados" style="color:whitesmoke"></div>
+            <script>
+                // Função para abrir o modal e carregar os dados do perfil
+                function abrirPerfil(){
+                    const modal = document.getElementById("modal-usuario");
+        
+                    fetch("perfil.php")
+                        .then(response => response.text())
+                        .then(data => {
+                            document.getElementById("perfil-dados").innerHTML = data;
+                            modal.showModal();
+                        })
+                        .catch(error => {
+                            document.getElementById("perfil-dados").innerHTML = "Erro ao carregar perfil.";
+                            console.error(error);
+                            modal.showModal();
+                        });
+                }
+            </script>
+            
+        </div>
+    </dialog>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="JS.js"></script>   
+</body>
+
+<script src="JS.js"></script>
+</html>

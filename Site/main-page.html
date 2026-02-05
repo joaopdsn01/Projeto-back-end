@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--incluindo o bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Kali Racers</title>
+    <!--Incluindo o style-->
+    <link rel="stylesheet" href="Style.css">
+</head>
+
+<body>
+
+                <!--Menu lateral Mobile-->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="menu-lateral-mobile">
+        <div class="offcanvas-header">
+            <h1 class="offcanvas-title">Kali racers</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas">Fecha?</button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a class="nav-link" href="Turbinas.html">Turbinas</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Perifericos.html">Periféricos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Alimentacao.html">Alimentação</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="Powertrain.html">Power train</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="User_Consult.html">Consultar usuário</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+
+                <!--Menu lateral desktop-->
+    <div class="menu-lateral d-none d-md-block">
+        <h1>Kali racers</h1>
+        <ul class="nav flex-column">
+            <li class="nav-item">
+                <a class="nav-link" href="Turbinas.html">Turbinas</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="Perifericos.html">Periféricos</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="Alimentacao.html">Alimentação</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="Powertrain.html">Power train</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="User_Consult.html">Consultar usuário</a>
+            </li>
+        </ul>
+    </div>
+
+                    <!--Menu principal-->
+    <div class="areal-principal">
+        <!--Topo-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <!--Botão do menu lateral (para o mobile)-->
+                <button class="btn btn-outline-light d-md-none me-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#menu-lateral-mobile"> ☰</button>
+                <!--Logo do site com o link para voltar para o início-->
+                <a class="navbar-brand" href="main-page.html"> <img src="Logo1.png" class="img-fluid" style="width: 40%; height: 40%;"></a>
+                <div class="row justify-content-end">
+
+                    <!--Carrinho-->
+                    <!--   
+                    <button id="carrinho" type="button" class="btn" data-bs-toggle="button"> <img src="carrinho.png" style="width:10%;height:80%;margin-top:10;"> </button>  
+                    -->
+
+                    <!--Dark Mode-->
+                    
+                    
+                    <button id="darkmode" type="button" class="btn"  data-bs-toggle="button"> <img src="darkmode.png" style="width:80%;height:80%;"> </button>
+                    
+                    
+                    <!--Login e cadastro-->
+                    <button id="usuario" type="button" class="btn"  data-bs-toggle="button"> <img src="icone.png" style="width:80%;height:80%;"> </button>
+                </div>
+            </div>
+        </nav>
+    </div>
+    
+            <!--Imagem foco-->                           
+    <div>
+        <img id="img-foco" src="Opala turbao.jpg">
+    </div>
+
+
+                    <!--Conteúdo principal-->
+    <div class="conteudo-principal">
+
+        <!--row = Linhas de conteúdos-->
+        <div class="row">
+
+            <!-- Card 1 -->
+            <div class="card" id="card">
+                <div class="card-body">
+                    <button type="button" 
+                            class="btn btnmodalproduto" 
+                            data-bs-toggle="modal" 
+                            data-bs-target="#modalProduto" 
+                            data-nome="HX 40" 
+                            data-preco="R$ 2.500,00" 
+                            data-desc="Turbina HX 40 Auto Avionics, alto desempenho.">
+                        <h5 id="titulo-produto" class="card-title">HX 40</h5>
+                        <img src="HX40.jpg" style="width:59%;height:50%;">
+                        <!--Mais conteúdo-->
+                        <!--LEMBRAR DE USA PHP AQUI, PASSAR AS INFORMAÇÕES PARA O MODAL VIA ATRIBUTOS (data-*) OU FAZER UMA REQUISIÇÃO AJAX( JS chama o PHP QUE CONSULTA O BANCO E RETORNA OS DADOS). -->
+                        <p class="card-text" style="color:white;">HX 40 Auto Avionics</p>
+                        <p style="color:blue;">R$ 2.500,00<br>em até 12x</p>
+                        </button>
+                </div>
+            </div>
+            
+
+            <!-- Card 2-->
+            <div class="card" id="card">
+                <div class="card-body">
+                    <button type="button" 
+                            class="btn btnmodalproduto" 
+                            data-bs-toggle="modal" 
+                            data-bs-target="#modalProduto" 
+                            data-nome="Bomba de oleo ap" 
+                            data-preco="R$ 619,10" 
+                            data-desc="Bomba de óleo alta vazão WV ap, 1.6/1.8/2.0">
+                        <h5 id="titulo-produto" class="card-title">Bomba de óleo ap</h5>
+                        <img src="bomba de oleo alta vazao wv ap.webp" style="width:100%;height:50%;">
+                        <!--Mais conteúdo-->
+                        <!--LEMBRAR DE USA PHP AQUI, PASSAR AS INFORMAÇÕES PARA O MODAL VIA ATRIBUTOS (data-*) OU FAZER UMA REQUISIÇÃO AJAX( JS chama o PHP QUE CONSULTA O BANCO E RETORNA OS DADOS). -->
+                        <p class="card-text" style="color:white;">Bomba de óleo</p>
+                        <p style="color:blue;">R$ 619,00<br>em até 12x</p>
+                        </button>
+                </div>
+            </div>
+
+            <!-- Card 3-->
+            <div class="card" id="card">
+                <div class="card-body">
+                    <button type="button" 
+                            class="btn btnmodalproduto" 
+                            data-bs-toggle="modal" 
+                            data-bs-target="#modalProduto" 
+                            data-nome="Bomba de Combustível" 
+                            data-preco="R$ 29.998,00" 
+                            data-desc="Bomba de Combustível Nostrum de Alta Performance Stage 2 (HPFP)
+                            Para BMW F80 M3, F82 / F83 M4 e F87 M2 Competition Motor S55 3.0L">
+                        <h5 id="titulo-produto" class="card-title">Bomba de combustível</h5>
+                        <img src="Bomba de Combustível Nostrum de Alta Performance Stage 2 (HPFP) Para BMW F80 M3 F82  F83 M4 e F87 M2 Competition Motor S55 30L.webp" style="width:100%;height:50%;">
+                        <!--Mais conteúdo-->
+                        <!--LEMBRAR DE USA PHP AQUI, PASSAR AS INFORMAÇÕES PARA O MODAL VIA ATRIBUTOS (data-*) OU FAZER UMA REQUISIÇÃO AJAX( JS chama o PHP QUE CONSULTA O BANCO E RETORNA OS DADOS). -->
+                        <p class="card-text" style="color:white;">Bomba de combustível nostrum de alta performance Stage 2 para BMW Chassi F > 2020</p>
+                        <p style="color:blue;">R$ 29.998,00<br>em até 12x</p>
+                        </button>
+                </div>
+            </div>
+
+            <!-- Card 4-->
+            <div class="card" id="card">
+                <div class="card-body">
+                    <button type="button" 
+                            class="btn btnmodalproduto" 
+                            data-bs-toggle="modal" 
+                            data-bs-target="#modalProduto" 
+                            data-nome="ft700" 
+                            data-preco="R$ 22.472,25" 
+                            data-desc="Injeção eletronica FuelTech ft 700">
+                        <h5 id="titulo-produto" class="card-title">HX 40</h5>
+                        <img src="ft700.webp" style="width:100%;height:50%;">
+                        <!--Mais conteúdo-->
+                        <!--LEMBRAR DE USA PHP AQUI, PASSAR AS INFORMAÇÕES PARA O MODAL VIA ATRIBUTOS (data-*) OU FAZER UMA REQUISIÇÃO AJAX( JS chama o PHP QUE CONSULTA O BANCO E RETORNA OS DADOS). -->
+                        <p class="card-text" style="color:white;">FuelTech ft700</p>
+                        <p style="color:blue;">R$ 22.472,25<br>em até 12x</p>
+                        </button>
+                </div>
+            </div>
+
+
+        <!--Row 2 -->
+        <div class="card" id="card">
+            <div class="card-body">
+                <button type="button" 
+                        class="btn btnmodalproduto" 
+                        data-bs-toggle="modal" 
+                        data-bs-target="#modalProduto" 
+                        data-nome="HX 40" 
+                        data-preco="R$ 2.500,00" 
+                        data-desc="Turbina HX 40 Auto Avionics, alto desempenho.">
+                    <h5 id="titulo-produto" class="card-title">HX 40</h5>
+                    <img src="HX40.jpg" style="width:59%;height:50%;">
+                    <!--Mais conteúdo-->
+                    <!--LEMBRAR DE USA PHP AQUI, PASSAR AS INFORMAÇÕES PARA O MODAL VIA ATRIBUTOS (data-*) OU FAZER UMA REQUISIÇÃO AJAX( JS chama o PHP QUE CONSULTA O BANCO E RETORNA OS DADOS). -->
+                    <p class="card-text" style="color:white;">HX 40 Auto Avionics</p>
+                    <p style="color:blue;">R$ 2.500,00<br>em até 12x</p>
+                    </button>
+            </div>
+        </div>
+
+            <!-- Card 2-->
+            <div class="card" id="card">
+                <div class="card-body">
+                    <button type="button" 
+                            class="btn btnmodalproduto" 
+                            data-bs-toggle="modal" 
+                            data-bs-target="#modalProduto" 
+                            data-nome=".70" 
+                            data-preco="R$ 4.500,00" 
+                            data-desc="Turbina .70 Auto Avionics, alto desempenho.">
+                        <h5 id="titulo-produto" class="card-title">.70</h5>
+                        <img src="70 auto avionics.webp" style="width:59%;height:50%;">
+                        <!--Mais conteúdo-->
+                        <!--LEMBRAR DE USA PHP AQUI, PASSAR AS INFORMAÇÕES PARA O MODAL VIA ATRIBUTOS (data-*) OU FAZER UMA REQUISIÇÃO AJAX( JS chama o PHP QUE CONSULTA O BANCO E RETORNA OS DADOS). -->
+                        <p class="card-text" style="color:white;">.70 Auto Avionics</p>
+                        <p style="color:blue;">R$ 4.500,00<br>em até 12x</p>
+                        </button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Modal de Produto (Bootstrap) -->
+<div class="modal fade" id="modalProduto" tabindex="-1" aria-labelledby="modalLabelProduto" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalLabelProduto"></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+        </div>
+        
+        <div class="modal-body">
+          <p id="modalPreco"></p>
+          <p id="modalDesc"></p>
+        </div>
+        
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+                <!--Modal do perfil-->
+    <dialog id="modal-usuario">
+        <div id="perfil">
+            <h2 style="color: #f74000;">Perfil de usuário</h2>
+            <button onclick="abrirPerfil()">Informações do usuário</button>
+            <div id="perfil-dados" style="color:whitesmoke"></div>
+            <script>
+                // Função para abrir o modal e carregar os dados do perfil
+                function abrirPerfil(){
+                    const modal = document.getElementById("modal-usuario");
+        
+                    fetch("perfil.php")
+                        .then(response => response.text())
+                        .then(data => {
+                            document.getElementById("perfil-dados").innerHTML = data;
+                            modal.showModal();
+                        })
+                        .catch(error => {
+                            document.getElementById("perfil-dados").innerHTML = "Erro ao carregar perfil.";
+                            console.error(error);
+                            modal.showModal();
+                        });
+                }
+            </script>
+            <!--Parte para alterar a senha (modal dentro do modal)-->
+            <button id="altsenha">Alterar senha</button>
+            <dialog id="modal-altsenha" style="background-color: rgb(32,32,32);">
+                <h2 style="color: #f74000">Alteranhar senha</h2>
+
+                <form id="altsenhaform" class="active" action="altsenha.php" method="post">
+                    <input type="password" name="nsenha" placeholder="Nova senha" required>
+                    <input type="password" name="cnsenha" placeholder="Confirmar senha" required>
+                    <button type="submit">Confirmar</button>
+                </form>
+            </dialog>
+
+            <!--LOGOFF-->
+            <button onclick="window.location.href='logout.php'">Sair</button>
+
+        </div>
+    </dialog>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="JS.js"></script>   
+</body>
+
+<script src="JS.js"></script>
+</html>

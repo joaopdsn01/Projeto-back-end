@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--incluindo o bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Kali Racers</title>
+    <!--Incluindo o style-->
+    <link rel="stylesheet" href="Style.css">
+</head>
+
+<body>
+
+                <!--Menu lateral Mobile-->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="menu-lateral-mobile">
+        <div class="offcanvas-header">
+            <h1 class="offcanvas-title">Kali racers</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas">Fecha?</button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a class="nav-link" href="Turbinas.html">Turbinas</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Perifericos.html">Periféricos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Alimentacao.html">Alimentação</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="Powertrain.html">Power train</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="User_Consult.html">Consultar usuário</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+
+                <!--Menu lateral desktop-->
+    <div class="menu-lateral d-none d-md-block">
+        <h1>Kali racers</h1>
+        <ul class="nav flex-column">
+            <li class="nav-item">
+                <a class="nav-link" href="Turbinas.html">Turbinas</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="Perifericos.html">Periféricos</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="Alimentacao.html">Alimentação</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="Powertrain.html">Power train</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="User_Consult.html">Consultar usuário</a>
+            </li>
+        </ul>
+    </div>
+
+                    <!--Menu principal-->
+    <div class="areal-principal">
+        <!--Topo-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <!--Botão do menu lateral (para o mobile)-->
+                <button class="btn btn-outline-light d-md-none me-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#menu-lateral-mobile"> ☰</button>
+                <!--Logo do site com o link para voltar para o início-->
+                <a class="navbar-brand" href="main-page.html"> <img src="Logo1.png" class="img-fluid" style="width: 40%; height: 40%;"></a>
+                <div class="row justify-content-end">
+                    <!--Dark Mode-->
+                    <button id="darkmode" type="button" class="btn"  data-bs-toggle="button"> <img src="darkmode.png" style="width:80%;height:80%;"> </button>
+                    <!--Login e cadastro-->
+                    <button id="usuario" type="button" class="btn"  data-bs-toggle="button"> <img src="icone.png" style="width:80%;height:80%;"> </button>
+                </div>
+            </div>
+        </nav>
+    </div>
+    
+    
+
+
+<!--Conteúdo principal-->
+<div class="conteudo-principal">
+    <h1>Power train</h1>
+
+    <!--row = Linhas de conteúdos-->
+    <div class="row">
+
+        <!-- Card 1 -->
+        <div class="card" id="card">
+            <div class="card-body">
+                <button type="button" 
+                        class="btn btnmodalproduto" 
+                        data-bs-toggle="modal" 
+                        data-bs-target="#modalProduto" 
+                        data-nome="Biela" 
+                        data-preco="R$ 2.299,90" 
+                        data-desc="Bielas super A-Beam basic 144mm
+                        Comprimento entre centros: 144mm
+                        Diâmetro do pino: 20mm
+                        Diâmentro do colo (moente): 50,6mm
+                        Material: Aço forjado 4140
+                        Suporta até 600cv">
+                    <h5 id="titulo-produto" class="card-title">Jogo de bielas</h5>
+                    <img src="Biela Forjada Super A-Beam Basic 600cv 144mm para VW Ap.webp" style="width:59%;height:50%;">
+                    <!--Mais conteúdo-->
+                    <!--LEMBRAR DE USA PHP AQUI, PASSAR AS INFORMAÇÕES PARA O MODAL VIA ATRIBUTOS (data-*) OU FAZER UMA REQUISIÇÃO AJAX( JS chama o PHP QUE CONSULTA O BANCO E RETORNA OS DADOS). -->
+                    <p class="card-text" style="color:white;">Jogo de Bielas forjadas super A-Beam 144mm</p>
+                    <p style="color:blue;">R$ 2.299,90<br>em até 12x</p>
+                    </button>
+            </div>
+        </div>
+        
+
+        <!-- Card 2-->
+        <div class="card" id="card">
+            <div class="card-body">
+                <button type="button" 
+                        class="btn btnmodalproduto" 
+                        data-bs-toggle="modal" 
+                        data-bs-target="#modalProduto" 
+                        data-nome="Embreagem de cerâmica" 
+                        data-preco="R$ 1.253,00" 
+                        data-desc="Embreagem cerâmica displatec AP Street light
+                        Carga de 980lbs pedal
+                        Recomendado até 400cv
+                        1 disco, 6 pastilhas de cerâmicas importadas">
+                    <h5 id="titulo-produto" class="card-title">Embreagem de cerâmica</h5>
+                    <img src="Embreagem Cerâmica Street Light Ap 1.8 2.0  displatec.webp" style="width:59%;height:50%;">
+                    <!--Mais conteúdo-->
+                    <!--LEMBRAR DE USA PHP AQUI, PASSAR AS INFORMAÇÕES PARA O MODAL VIA ATRIBUTOS (data-*) OU FAZER UMA REQUISIÇÃO AJAX( JS chama o PHP QUE CONSULTA O BANCO E RETORNA OS DADOS). -->
+                    <p class="card-text" style="color:white;">Embreagem de cerâmica displatec até 400 cv</p>
+                    <p style="color:blue;">R$ 1.253,00<br>em até 12x</p>
+                    </button>
+            </div>
+        </div>
+
+        <!-- Card 3-->
+        <div class="card" id="card">
+            <div class="card-body">
+                <button type="button" 
+                        class="btn btnmodalproduto" 
+                        data-bs-toggle="modal" 
+                        data-bs-target="#modalProduto" 
+                        data-nome="Junta de cabeçote" 
+                        data-preco="R$ 91.33" 
+                        data-desc="Junta de cabeçote em fibra
+                        Marca: Sado
+                        aplicação em motores AP tanto vw quanto ford">
+                    <h5 id="titulo-produto" class="card-title">Junta de cabeçote</h5>
+                    <img src="Junta Cabeçote Vw Golf Motor Ap 2.0.webp" style="width:59%;height:50%;">
+                    <!--Mais conteúdo-->
+                    <!--LEMBRAR DE USA PHP AQUI, PASSAR AS INFORMAÇÕES PARA O MODAL VIA ATRIBUTOS (data-*) OU FAZER UMA REQUISIÇÃO AJAX( JS chama o PHP QUE CONSULTA O BANCO E RETORNA OS DADOS). -->
+                    <p class="card-text" style="color:white;">Junta de cabeçote Sado 2.0</p>
+                    <p style="color:blue;">R$ 91,33<br>em até 12x</p>
+                    </button>
+            </div>
+        </div>
+
+        <!-- Card 4-->
+        <div class="card" id="card">
+            <div class="card-body">
+                <button type="button" 
+                        class="btn btnmodalproduto" 
+                        data-bs-toggle="modal" 
+                        data-bs-target="#modalProduto" 
+                        data-nome="Pistao forjado" 
+                        data-preco="2.579,00" 
+                        data-desc="Pistão forjado AFP AP 2.0 Turbo 83,144mm
+                        AFP racing 
+                        conjunto para 800cv
+                        caneletas dos anéis: 1,5/1,5/2,0mm
+                        Altura de compressão: 32,20mm
+                        Volume da cabeça: côncavo -17cm3
+                        Medida do pino do pistão: 20x54mm(não incluso)">
+                    <h5 id="titulo-produto" class="card-title">Pistão forjado  AP</h5>
+                    <img src="Pistao Forjado Afp Ap 2.0 Turbo 83,41mm.webp" style="width:59%;height:50%;">
+                    <!--Mais conteúdo-->
+                    <!--LEMBRAR DE USA PHP AQUI, PASSAR AS INFORMAÇÕES PARA O MODAL VIA ATRIBUTOS (data-*) OU FAZER UMA REQUISIÇÃO AJAX( JS chama o PHP QUE CONSULTA O BANCO E RETORNA OS DADOS). -->
+                    <p class="card-text" style="color:white;">Conjunto de pistão AFP AP 2.0 Turbo</p>
+                    <p style="color:blue;">R$ 2.579,00<br>em até 12x</p>
+                    </button>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- Modal de Produto (Bootstrap) -->
+<div class="modal fade" id="modalProduto" tabindex="-1" aria-labelledby="modalLabelProduto" aria-hidden="true">
+<div class="modal-dialog modal-dialog-centered">
+  <div class="modal-content">
+    
+    <div class="modal-header">
+      <h5 class="modal-title" id="modalLabelProduto"></h5>
+      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+    </div>
+    
+    <div class="modal-body">
+      <p id="modalPreco"></p>
+      <p id="modalDesc"></p>
+    </div>
+    
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+    </div>
+  </div>
+</div>
+</div>
+
+
+            <!--Modal do login-->
+<dialog id="modal-usuario">
+    <div id="perfil">
+        <h2 style="color: #f74000;">Perfil de usuário</h2>
+        <button onclick="abrirPerfil()">Informações do usuário</button>
+        <div id="perfil-dados" style="color:whitesmoke"></div>
+        <script>
+            // Função para abrir o modal e carregar os dados do perfil
+            function abrirPerfil(){
+                const modal = document.getElementById("modal-usuario");
+    
+                fetch("perfil.php")
+                    .then(response => response.text())
+                    .then(data => {
+                        document.getElementById("perfil-dados").innerHTML = data;
+                        modal.showModal();
+                    })
+                    .catch(error => {
+                        document.getElementById("perfil-dados").innerHTML = "Erro ao carregar perfil.";
+                        console.error(error);
+                        modal.showModal();
+                    });
+            }
+        </script>
+        
+    </div>
+</dialog>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="JS.js"></script>   
+</body>
+
+<script src="JS.js"></script>
+</html>
